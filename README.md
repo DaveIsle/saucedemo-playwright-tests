@@ -41,29 +41,25 @@ Opening the report - npx playwright show-report
 
 ### Authentication & Access Control
 If users can’t log in, the business stops. If access control fails, it becomes a security issue. Highest risk area.
-
-  Multi-user login matrix (standard, problem, performance, error users) – verify correct access and error behaviour  
-  Session persistence & logout – ensure authentication state is correctly maintained and invalidated  
-  Lockout / rate limiting – ensure repeated failures trigger protection mechanisms  
+- Multi-user login matrix (standard, problem, performance, error users) – verify correct access and error behaviour  
+- Session persistence & logout – ensure authentication state is correctly maintained and invalidated  
+- Lockout / rate limiting – ensure repeated failures trigger protection mechanisms  
 
 ### Checkout Validation (Revenue Critical)
 Checkout failures directly impact revenue and order completion.
-
-  Required field validation  
-  Error handling for invalid or missing data  
-  Order summary accuracy (items, totals, tax)  
-  Navigation behaviour during checkout (back/forward handling)  
+- Required field validation  
+- Error handling for invalid or missing data  
+- Order summary accuracy (items, totals, tax)  
+- Navigation behaviour during checkout (back/forward handling)  
 
 ### Cart Integrity (Data and Pricing Accuracy)
 Incorrect cart behaviour leads to incorrect orders and trust issues.
-
-  Price calculation accuracy  
-  Tax and total validation  
-  Cart persistence across navigation and refresh  
-  Multi-item add and remove consistency  
+- Price calculation accuracy  
+- Tax and total validation  
+- Cart persistence across navigation and refresh  
+- Multi-item add and remove consistency  
 
 ### Inventory and Product Display (Conversion Critical)
 Broken product display directly impacts purchasing ability.
-
-  Sorting (A–Z, Z–A, price low to high and high to low)  
-  Product detail accuracy  
+- Sorting (A–Z, Z–A, price low to high and high to low)  
+- Product detail accuracy  
