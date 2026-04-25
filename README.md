@@ -5,15 +5,15 @@
 ## Tests Included:
 
 ### Login
-Valid login (standard_user)  
-Invalid login (locked_out_user)
+- Valid login (standard_user)  
+- Invalid login (locked_out_user)
 
 ### Cart
-Add item to cart  
-Remove item from cart
+- Add item to cart  
+- Remove item from cart
 
 ### Checkout
-Full end-to-end checkout flow
+- Full end-to-end checkout flow
 
 ---
 
@@ -31,9 +31,9 @@ npx playwright install
 
 ## How to run the tests.
 
-Run all the tests - npx playwright test  
-Run a specific test file - npx playwright test login.spec.ts  
-Opening the report - npx playwright show-report
+- Run all the tests - npx playwright test  
+- Run a specific test file - npx playwright test login.spec.ts  
+- Opening the report - npx playwright show-report
 
 ---
 
