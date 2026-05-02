@@ -16,7 +16,7 @@ export class CheckoutOverviewPage {
   }
 
   /**
-   * Assert both URL and page title here because the checkout URL's are number ordered. 
+   * Assert both URL and page title here because the checkout URL's are number ordered.
    * If the page ordering changes, we may not be on the expected page anymore and this will catch it.
    */
   async assertOnCheckoutOverviewPage() {

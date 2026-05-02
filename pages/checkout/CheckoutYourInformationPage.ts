@@ -27,10 +27,10 @@ export class CheckoutYourInformationPage {
     await this.continueButton.click();
   }
 
-   /**
-   * Assert both URL and page title here because the checkout URL's are number ordered. 
+  /**
+   * Assert both URL and page title here because the checkout URL's are number ordered.
    * If the page ordering changes, we may not be on the expected page anymore and this will catch it.
-   */ 
+   */
   async assertOnCheckoutInfoPage() {
     await expect(this.page).toHaveURL(this.checkoutYourInfoUrl);
     await expect(this.pageTitle).toHaveText(this.pageTitleText);

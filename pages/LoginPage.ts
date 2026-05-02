@@ -25,11 +25,11 @@ export class LoginPage {
     await this.loggedInSuccessfully();
   }
 
-   async loginAsLockedOutUser() {
+  async loginAsLockedOutUser() {
     await this.goto();
     await this.login("locked_out_user", "secret_sauce");
-  } 
-
+  }
+  
   private async login(username: string, password: string) {
     await this.username.fill(username);
     await this.password.fill(password);

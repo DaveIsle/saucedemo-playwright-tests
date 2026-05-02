@@ -15,28 +15,27 @@ test("user can complete the checkout flow", async ({ page }) => {
   const checkoutInfo = new CheckoutYourInformationPage(page);
   const checkoutComplete = new CheckoutCompletePage(page);
 
-  
   await login.loginAsStandardUser();
-  
+
   //add item to cart and navigate to cart page
   await inventory.addItemToCart("sauce-labs-backpack");
   await expect(inventory.cartBadge).toHaveText("1");
   await inventory.goToCart();
-  
+
   // assert on cart page and proceed to checkout
   await cart.assertOnCartPage();
   await cart.proceedToCheckout();
-  
+
   // fill checkout info and continue checking out
   await checkoutInfo.assertOnCheckoutInfoPage();
   await checkoutInfo.fillCustomerInfo("John", "Doe", "12345");
   await checkoutInfo.continueCheckout();
-  
+
   // assert on overview page and complete checkout
   const checkoutOverview = new CheckoutOverviewPage(page);
   await checkoutOverview.assertOnCheckoutOverviewPage();
   await checkoutOverview.completeCheckout();
-  
+
   // assert on checkout complete page and navigate back home
   await checkoutComplete.assertOnCheckoutCompletePage();
   await checkoutComplete.goBackHome();

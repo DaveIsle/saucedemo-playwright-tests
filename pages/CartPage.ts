@@ -8,7 +8,9 @@ export class CartPage {
 
   constructor(private readonly page: Page) {
     this.checkoutButton = page.locator('[data-test="checkout"]');
-    this.continueShoppingButton = page.locator('[data-test="continue-shopping"]');
+    this.continueShoppingButton = page.locator(
+      '[data-test="continue-shopping"]',
+    );
   }
 
   async proceedToCheckout() {
